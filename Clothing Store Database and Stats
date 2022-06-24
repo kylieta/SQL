@@ -1,0 +1,32 @@
+Create a clothing store data base
+
+CREATE table store (id integer primary key, name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+
+INSERT into store VALUES
+(1, 'jeans', 100, 15, 1),
+(2, 'shirts', 100, 10, 2),
+(3, 'dresses', 100, 20, 3),
+(4, 'hats', 100, 5, 6),
+(5, 'rings', 50, 2, 4),
+(6, 'necklaces', 50, 4, 4),
+(7, 'bracelets', 50, 3, 4),
+(8, 'shoes', 200, 10, 5),
+(9, 'sandals', 100, 10, 5),
+(10, 'scarves', 25, 5, 6),
+(11, 'coats', 25, 30, 7),
+(12, 'hoodies', 20, 20, 7),
+(13, 'bedding', 60, 75, 8),
+(14, 'pillows', 35, 20, 8),
+(15, 'blankets', 40, 50, 8);
+SELECT * FROM store;
+
+--display the data ordered by price.
+SELECT  * from store ORDER BY price;
+
+--display the sum of quantity in store.
+SELECT SUM (quantity) from store;
+
+--what is the average price of an item?
+SELECT AVG(price) "avg bulk item price"
+FROM store
+where section='bulk'; 
